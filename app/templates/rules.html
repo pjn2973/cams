@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="content">
+        <p><h1>Rules</h1></p>
+        <table>
+            <tr>
+                <td>External Reference</td>
+                <td>Regulation Text</td>
+                <td></td>
+            </tr>
+            {% for reg in regulation %}
+            <tr>
+                <td>{{ reg.Regulation_Number }}</td>
+                <td>{{ reg.Regulation_Text }}</td>
+                <td><a href="">Edit</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

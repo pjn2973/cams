@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        {% if title %}
+        <title>{{ title }} - Mockup Block 1</title>
+        {% else %}
+        <title>Mockup Block 1</title>
+        {% endif %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <img style="float:right; overflow: auto;" src="{{ url_for('static', filename='Images/logo.png') }}" alt="BMM Logo">
+                <p>Hello, {{ user.username }}</p>
+            </div>
+            <div class="sidebar">
+                <u>Admin Menu</u><br>
+                Add Rule<br>
+                Modify Rule<br>
+                Audit Rules<br>
+                <hr>
+                <u>Main Menu</u><br>
+                New Testing<br>
+                Resume Testing<br>
+                Review Testing<br>
+                Save Testing<br>
+                Logout<br>
+            </div>
+            {% block content %}{% endblock %}
+            <div class="footer">
+                <hr>
+                Copyright 2019<br>
+                If printed, this copy is unofficial.
+            </div>
+        </div>
+    </body>
+</html>

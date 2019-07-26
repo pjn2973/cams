@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Mockup Block 1</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <img style="float:right; overflow: auto;" src="{{ url_for('static', filename='Images/logo.png') }}" alt="BMM Logo">
+                <p>Hello, {{ user.username }}</p>
+            </div>
+            <div class="sidebar">
+                <u>Admin Menu</u><br>
+                Add Rule<br>
+                Modify Rule<br>
+                Audit Rules<br>
+                <hr>
+                <u>Main Menu</u><br>
+                New Testing<br>
+                Resume Testing<br>
+                Review Testing<br>
+                Save Testing<br>
+                Logout<br>
+            </div>
+            <div class="content">
+                <p style="font-weight: bold;">Test.1001 - Submission #0</p>
+                <table style="padding: 2px; border-collapse: collapse;">
+                    <tr style="background-color: grey;">
+                        <td style="font-weight: bold;">External Reference</td>
+                        <td style="font-weight: bold;">Regulation Text</td>
+                        <td style="font-weight: bold;">Pass</td>
+                        <td style="font-weight: bold;">Fail</td>
+                        <td style="font-weight: bold;">N/A</td>
+                    </tr>
+                    <tr>
+                        <td>GLI-11 v2.0 4.3.10 a)</td>
+                        <td>The test laboratory will test via PC communications multiple iterations to gather enough data to verify the randomness.  In addition, the manufacturer may supply live data to assist in this evaluation.</td>
+                        <td><input type="radio" name="test" value="Pass"></td>
+                        <td><input type="radio" name="test" value="Fail"></td>
+                        <td><input type="radio" name="test" value="N/A"></td>
+                    </tr>
+                    <tr>
+                        <td>GLI-11 v2.0 4.3.10 b)</td>
+                        <td>Physical evaluation of the mechanical based RNG:<br>The mechanical pieces must be constructed of materials to prevent decomposition of any component over time, e.g. to prevent bias in the generation of the random values.</td>
+                        <td><input type="radio" name="test1" value="Pass"></td>
+                        <td><input type="radio" name="test1" value="Fail"></td>
+                        <td><input type="radio" name="test1" value="N/A"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <hr>
+                Copyright 2019<br>
+                If printed, this copy is unofficial.
+            </div>
+        </div>
+    </body>
+</html>

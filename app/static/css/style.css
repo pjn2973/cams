@@ -1,0 +1,45 @@
+.header {
+    grid-area: header;
+    
+}
+
+.sidebar {
+    grid-area: sidebar;
+    
+}
+
+.content {
+    grid-area: content;
+    
+}
+
+.footer {
+    grid-area: footer;
+    
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+    "header" 
+    "sidebar" 
+    "content" 
+    "footer"
+}
+
+@media only screen and (min-width: 200px) {
+    .wrapper {
+        grid-gap: 10px;
+        grid-template-columns: 120px auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "footer footer";
+    }
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 3px;
+}
