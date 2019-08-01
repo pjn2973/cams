@@ -1,19 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Edit Rule</h1>
-    <form action="" method="POST">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.id.label }}{{ form.id(size=32) }}<br>
-            {{ form.reference.label }}{{ form.reference }}<br>
-            {{ form.start_date.label }}{{ form.start_date }}<br>
-            {{ form.end_date.label }}{{ form.end_date }}<br>
-            {{ form.number.label }}{{ form.number }}<br>
-            {{ form.parent.label }}{{ form.parent }}<br>
-            {{ form.text.label }}{{ form.text(cols=50, rows=4) }}<br>
-            {{ form.comment.label }}{{ form.comment(cols=50, rows=2) }}<br>
-        </p>
-        <p>{{ form.submit() }}</p>
-    </form>
+    <div class="content">
+        <h1>Edit Rule</h1>
+        <form action="" method="POST">
+           {{ form.hidden_tag() }}
+            <p>
+                <table>
+                    <tr>
+                        <td>{{ form.id.label }}</td>
+                        <td>{{ form.id(size=32) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.reference.label }}</td>
+                        <td>{{ form.reference }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.start_date.label }}</td>
+                        <td>{{ form.start_date }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.end_date.label }}</td>
+                        <td>{{ form.end_date }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.number.label }}</td>
+                        <td>{{ form.number }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.parent.label }}</td>
+                        <td>{{ form.parent }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.text.label }}</td>
+                        <td>{{ form.text(cols=100, rows=4) }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.comment.label }}</td>
+                        <td>{{ form.comment(cols=100, rows=2) }}</td>
+                    </tr>
+                </table>
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
 {% endblock %}
